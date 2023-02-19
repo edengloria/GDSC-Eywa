@@ -51,3 +51,6 @@ model.fit(train_generator, epochs=epochs)
 # 모델을 평가합니다.
 test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
 test_generator = test_datagen.flow_from_directory(test_dir, target_size=(224, 224), batch_size=1, class_mode='categorical', shuffle=False)
+
+#모델을 저장합니다.
+model.save('Model')
